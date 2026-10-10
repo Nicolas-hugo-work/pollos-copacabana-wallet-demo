@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Club Copacabana · Demo</title>
+<meta name="description" content="Demo de tarjeta de fidelidad en Google Wallet para restaurantes.">
+<link rel="icon" href="img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --rojo: #E30613;
+    --rojo-profundo: #9B0000;
+    --amarillo: #FFE600;
+    --naranja: #F38D0B;
+    --tinta: #2A1410;
+    --papel: #FFF8EC;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--papel); color: var(--tinta); font: 400 17px/1.55 Nunito, system-ui, sans-serif; }
+  img { max-width: 100%; }
+  .aguayo { height: 14px; background:
+    repeating-linear-gradient(90deg, #D81B60 0 26px, #FFE600 26px 34px, #1E9E4A 34px 60px, #F38D0B 60px 68px, #5B2A86 68px 94px, #E30613 94px 102px, #1565C0 102px 128px, #FFFFFF 128px 132px); }
+  .portada { background: var(--rojo-profundo); color: #fff; }
+  .portada .contenido { max-width: 1080px; margin: 0 auto; padding: 32px 16px 48px; display: grid; gap: 32px; align-items: center; grid-template-columns: 1.15fr .85fr; }
+  .portada .letrero { width: min(320px, 80%); display: block; margin-bottom: 18px; }
+  h1, h2 { font-family: 'Lilita One', system-ui, sans-serif; font-weight: 400; line-height: 1.05; margin: 0 0 14px; }
+  h1 { font-size: clamp(34px, 5.4vw, 56px); }
+  h1 em { font-style: normal; color: var(--amarillo); }
+  .portada p { font-size: 19px; max-width: 34ch; margin: 0; opacity: .95; }
+  .tarjeta { width: 100%; max-width: 340px; justify-self: center; filter: drop-shadow(0 18px 30px rgba(0,0,0,.35)); transform: rotate(2deg); }
+  section { max-width: 1080px; margin: 0 auto; padding: 48px 16px; }
+  h2 { font-size: clamp(28px, 4vw, 40px); color: var(--rojo-profundo); }
+  .guia { max-width: 60ch; margin: 0 0 28px; }
+  .socios { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+  .socio { background: #fff; border-radius: 20px; padding: 22px 20px; text-align: center; border: 3px solid var(--tinta); box-shadow: 6px 6px 0 var(--amarillo); }
+  .socio h3 { font: 800 21px Nunito, sans-serif; margin: 0; }
+  .numero { margin: 2px 0 6px; font-weight: 600; color: #7a5a50; letter-spacing: .04em; }
+  .saldo { margin: 0 0 12px; }
+  .saldo b { color: var(--rojo); }
+  .qr { width: 184px; margin: 0 auto 16px; }
+  .qr svg { display: block; width: 100%; height: auto; }
+  .boton { display: inline-block; padding: 8px; }
+  .boton img { display: block; height: 48px; width: auto; }
+  .beneficios { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; padding: 0; list-style: none; }
+  .beneficios li { background: #fff; border-left: 6px solid var(--rojo); border-radius: 12px; padding: 16px 18px; }
+  .beneficios b { display: block; font-size: 18px; color: var(--rojo-profundo); margin-bottom: 2px; }
+  footer { background: var(--tinta); color: #F3E6DA; }
+  footer .contenido { max-width: 1080px; margin: 0 auto; padding: 28px 16px 36px; font-size: 15px; }
+  footer strong { color: var(--amarillo); }
+  @media (max-width: 760px) {
+    .portada .contenido { grid-template-columns: 1fr; }
+    .tarjeta { transform: none; max-width: 300px; }
+  }
+</style>
+</head>
+<body>
+  <div class="aguayo" aria-hidden="true"></div>
+  <header class="portada">
+    <div class="contenido">
+      <div>
+        <img class="letrero" src="img/logo-ancho.png" alt="Pollos Copacabana">
+        <h1>Tu tarjeta de fidelidad, <em>en el celular</em> de tus clientes</h1>
+        <p>Club Copacabana vive en Google Wallet: sin app que descargar, sin tarjetas de cartón, y se actualiza sola con cada compra.</p>
+      </div>
+      <img class="tarjeta" src="img/tarjeta.png" alt="Tarjeta Club Copacabana en Google Wallet con puntos, sellos y código QR">
+    </div>
+  </header>
+  <div class="aguayo" aria-hidden="true"></div>
+
+  <section id="probar">
+    <h2>Pruébala en tu Android</h2>
+    <p class="guia">Escanea un código con la cámara del celular o, si ya estás en el teléfono, toca el botón. La tarjeta se guarda en Google Wallet al instante.</p>
+    <div class="socios">
+      <article class="socio">
+        <h3>Juan Mamani</h3>
+        <p class="numero">PC-000101</p>
+        <p class="saldo"><b>35</b> pts · <b>2/10</b> sellos</p>
+        <div class="qr" role="img" aria-label="Código QR para guardar la tarjeta de Juan Mamani"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39 39" shape-rendering="crispEdges"><path fill="#FFFFFF" d="M0 0h39v39H0z"/><path stroke="#1A1A1A" d="M1 1.5h7m1 0h1m6 0h1m2 0h1m3 0h1m1 0h1m1 0h1m3 0h7M1 2.5h1m5 0h1m1 0h2m1 0h1m1 0h1m2 0h1m1 0h2m1 0h1m3 0h1m4 0h1m5 0h1M1 3.5h1m1 0h3m1 0h1m1 0h1m3 0h1m3 0h1m2 0h3m1 0h5m2 0h1m1 0h3m1 0h1M1 4.5h1m1 0h3m1 0h1m2 0h3m1 0h3m1 0h1m1 0h4m1 0h2m1 0h2m1 0h1m1 0h3m1 0h1M1 5.5h1m1 0h3m1 0h1m1 0h4m2 0h6m6 0h1m3 0h1m1 0h3m1 0h1M1 6.5h1m5 0h1m7 0h2m1 0h2m2 0h1m1 0h2m1 0h1m3 0h1m5 0h1M1 7.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M11 8.5h1m3 0h1m1 0h1m5 0h4m1 0h1M1 9.5h1m2 0h6m2 0h2m3 0h2m8 0h4m2 0h1m1 0h3M2 10.5h2m4 0h4m3 0h1m1 0h4m1 0h3m1 0h1m1 0h1m3 0h3m1 0h1M3 11.5h1m1 0h3m2 0h2m1 0h1m2 0h1m6 0h2m2 0h2m3 0h2m1 0h1m1 0h1M2 12.5h2m2 0h1m3 0h2m3 0h1m2 0h1m4 0h1m6 0h1m3 0h4M2 13.5h1m1 0h1m2 0h5m3 0h1m3 0h3m9 0h2m4 0h1M1 14.5h2m7 0h1m4 0h5m1 0h2m1 0h1m1 0h1m1 0h2m3 0h2M1 15.5h2m1 0h2m1 0h1m3 0h1m1 0h1m1 0h2m1 0h1m1 0h1m2 0h1m2 0h3m1 0h1m2 0h5M1 16.5h3m1 0h1m2 0h1m1 0h3m1 0h3m2 0h3m1 0h2m2 0h1m1 0h1m2 0h1m1 0h3M1 17.5h1m2 0h1m1 0h2m6 0h2m5 0h1m1 0h1m1 0h4m2 0h1m3 0h3M2 18.5h1m3 0h1m2 0h2m1 0h3m1 0h1m2 0h3m3 0h1m2 0h1m1 0h1m1 0h1m2 0h1M1 19.5h1m1 0h1m1 0h1m1 0h3m1 0h1m2 0h3m3 0h1m3 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h2m1 0h1M1 20.5h3m1 0h2m1 0h1m2 0h1m3 0h1m1 0h1m2 0h1m2 0h2m1 0h1m3 0h5m2 0h1M1 21.5h1m5 0h1m2 0h1m2 0h1m1 0h1m1 0h2m5 0h2m1 0h8M3 22.5h2m3 0h1m2 0h1m1 0h4m1 0h1m1 0h1m2 0h2m1 0h3m4 0h1m1 0h1M1 23.5h1m3 0h1m1 0h2m1 0h2m1 0h4m1 0h2m2 0h3m3 0h1m1 0h3m1 0h1m2 0h1M2 24.5h4m6 0h2m1 0h1m2 0h1m2 0h1m5 0h1m3 0h5m1 0h1M1 25.5h2m2 0h1m1 0h1m2 0h1m1 0h2m1 0h1m1 0h1m1 0h3m2 0h2m3 0h4M1 26.5h1m1 0h1m2 0h1m3 0h1m3 0h4m1 0h1m2 0h1m1 0h1m1 0h4m3 0h1M1 27.5h3m3 0h2m3 0h2m2 0h2m1 0h5m3 0h2m2 0h1m3 0h3M1 28.5h1m2 0h1m1 0h1m2 0h1m2 0h1m6 0h1m8 0h1m1 0h1m2 0h3m1 0h1M1 29.5h1m2 0h2m1 0h2m3 0h1m2 0h2m3 0h1m2 0h1m2 0h1m1 0h8m1 0h1M9 30.5h1m1 0h2m3 0h1m2 0h3m7 0h1m3 0h1m1 0h2M1 31.5h7m1 0h1m3 0h1m2 0h2m2 0h5m1 0h1m2 0h1m1 0h1m1 0h1m2 0h2M1 32.5h1m5 0h1m1 0h7m1 0h1m1 0h3m1 0h1m2 0h4m3 0h1m2 0h1M1 33.5h1m1 0h3m1 0h1m1 0h4m1 0h1m3 0h1m5 0h2m1 0h7m3 0h1M1 34.5h1m1 0h3m1 0h1m1 0h3m1 0h4m1 0h4m1 0h2m1 0h3m1 0h2m3 0h3M1 35.5h1m1 0h3m1 0h1m2 0h3m1 0h1m1 0h1m4 0h4m1 0h1m2 0h2m2 0h1m1 0h1m1 0h1M1 36.5h1m5 0h1m4 0h4m1 0h2m1 0h2m1 0h2m2 0h2m4 0h5M1 37.5h7m1 0h4m1 0h1m2 0h1m3 0h1m2 0h2m1 0h1m1 0h1m1 0h2m1 0h1m2 0h1"/></svg>
+</div>
+        <a class="boton" href="https://pay.google.com/gp/v/save/eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YWxsZXQtZGVtb0B0YXJqZXRhLWRlbW8uaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJhdWQiOiJnb29nbGUiLCJ0eXAiOiJzYXZldG93YWxsZXQiLCJvcmlnaW5zIjpbImh0dHBzOi8vbmljb2xhcy1odWdvLXdvcmsuZ2l0aHViLmlvIl0sInBheWxvYWQiOnsibG95YWx0eU9iamVjdHMiOlt7ImlkIjoiMzM4ODAwMDAwMDAyMzIxODQ5Ni5zb2Npb19qdWFuLW1hbWFuaSIsImNsYXNzSWQiOiIzMzg4MDAwMDAwMDIzMjE4NDk2LnBvbGxvc19jb3BhY2FiYW5hX2RlbW8ifV19LCJpYXQiOjE3OTE2MDMzODl9.oethimaavpg3GJyLXd5Ars2fq8UjJz5eeBgD4LW6igXjT_kSNAb6FggfVWgPARDEg34zNraS5GxyPxnWvSVoVNnJTEnW8NHccuLG93axms4Kc32SJxK2DqSjGUdKxrej003FneP2-H1BkvuF6jRTmWs2RH86JOsNBA4t3exZcoAVQBsAxnb1zWBvSu3cJ6nl9POvvXPuMnLf3rk6lecCRqWkyIWfqPFxa8CME8KqWq3p5KVoXgsUp5fshjnxmGnXjFbWUzGgBIRbqPaWBEyyPkAAeYbToLfm0XLS8g_S9d6OQbeRUkUrsoqF9p-AAbPPvoiogFzpXiTVyVvaD2k0dQ"><img src="img/boton-wallet-es.svg" alt="Agregar a Google Wallet" width="252" height="48"></a>
+      </article>
+      <article class="socio">
+        <h3>María Quispe</h3>
+        <p class="numero">PC-000123</p>
+        <p class="saldo"><b>120</b> pts · <b>6/10</b> sellos</p>
+        <div class="qr" role="img" aria-label="Código QR para guardar la tarjeta de María Quispe"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 43 43" shape-rendering="crispEdges"><path fill="#FFFFFF" d="M0 0h43v43H0z"/><path stroke="#1A1A1A" d="M1 1.5h7m3 0h1m1 0h1m1 0h1m1 0h2m1 0h3m1 0h1m1 0h1m4 0h3m1 0h7M1 2.5h1m5 0h1m3 0h1m3 0h1m1 0h2m2 0h2m3 0h4m1 0h1m3 0h1m5 0h1M1 3.5h1m1 0h3m1 0h1m1 0h3m1 0h1m2 0h4m2 0h2m1 0h2m6 0h1m1 0h1m1 0h3m1 0h1M1 4.5h1m1 0h3m1 0h1m1 0h1m1 0h1m1 0h2m1 0h2m2 0h1m1 0h1m1 0h1m2 0h2m2 0h1m3 0h1m1 0h3m1 0h1M1 5.5h1m1 0h3m1 0h1m1 0h2m2 0h1m1 0h1m3 0h6m4 0h2m1 0h1m2 0h1m1 0h3m1 0h1M1 6.5h1m5 0h1m1 0h3m1 0h1m2 0h1m1 0h2m3 0h1m4 0h1m1 0h1m2 0h1m1 0h1m5 0h1M1 7.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M9 8.5h2m2 0h1m2 0h2m1 0h2m1 0h3m2 0h3m1 0h3M1 9.5h1m1 0h5m3 0h2m4 0h2m2 0h1m1 0h5m2 0h1m1 0h1m2 0h5M1 10.5h1m1 0h2m5 0h2m2 0h2m1 0h1m1 0h4m1 0h1m1 0h2m1 0h9m1 0h3M4 11.5h2m1 0h1m1 0h3m1 0h1m1 0h2m2 0h1m1 0h2m3 0h3m1 0h1m2 0h1m1 0h1m1 0h1M1 12.5h1m1 0h4m1 0h3m4 0h2m3 0h3m4 0h3m2 0h3m1 0h1m1 0h1m1 0h2M1 13.5h4m1 0h2m2 0h1m1 0h5m1 0h1m1 0h2m1 0h1m1 0h3m1 0h2m1 0h1m1 0h1m3 0h2m1 0h1M1 14.5h2m5 0h7m1 0h1m2 0h1m2 0h1m3 0h3m4 0h2m1 0h2m1 0h1m1 0h1M3 15.5h1m2 0h2m1 0h1m3 0h3m1 0h3m1 0h2m1 0h6m2 0h1m1 0h1m1 0h3M2 16.5h1m5 0h3m2 0h1m8 0h3m2 0h2m3 0h2m1 0h4M2 17.5h1m1 0h5m2 0h3m3 0h2m5 0h7m1 0h1m1 0h1m1 0h1m1 0h2m1 0h1M1 18.5h1m1 0h4m1 0h2m2 0h4m4 0h2m2 0h1m4 0h5m1 0h4m1 0h2M1 19.5h1m2 0h4m2 0h1m1 0h1m3 0h2m1 0h1m1 0h1m1 0h1m1 0h1m2 0h3m2 0h2m2 0h3M3 20.5h1m1 0h2m1 0h2m2 0h2m2 0h2m3 0h1m2 0h2m1 0h1m1 0h3m1 0h3m1 0h2m2 0h1M1 21.5h2m1 0h2m1 0h1m2 0h3m1 0h2m3 0h1m2 0h2m1 0h1m6 0h1m1 0h1m4 0h1M2 22.5h3m1 0h1m1 0h2m1 0h4m2 0h2m1 0h2m2 0h1m2 0h1m1 0h9m1 0h3M1 23.5h1m5 0h1m2 0h1m2 0h3m2 0h2m1 0h1m1 0h1m2 0h1m1 0h1m2 0h1m1 0h1m2 0h2M2 24.5h5m1 0h1m1 0h4m2 0h2m4 0h4m1 0h3m6 0h1m1 0h1M1 25.5h2m4 0h1m1 0h1m2 0h2m2 0h1m1 0h2m6 0h1m3 0h1m1 0h1m5 0h2M3 26.5h3m3 0h2m1 0h1m3 0h7m1 0h1m4 0h1m1 0h2m2 0h4m1 0h2M2 27.5h2m2 0h3m2 0h8m2 0h2m2 0h2m1 0h2m1 0h1m1 0h1m1 0h1m1 0h1m2 0h1M1 28.5h1m2 0h2m3 0h3m1 0h1m5 0h5m1 0h1m1 0h1m1 0h1m1 0h6m1 0h1M2 29.5h4m1 0h1m7 0h2m1 0h1m4 0h2m1 0h1m3 0h1m1 0h2m1 0h2m1 0h2M1 30.5h1m2 0h1m1 0h1m1 0h2m1 0h1m1 0h4m2 0h1m1 0h1m3 0h2m1 0h4m2 0h1m1 0h3m1 0h2M1 31.5h1m1 0h3m1 0h4m2 0h1m2 0h2m1 0h2m1 0h2m3 0h1m5 0h3m1 0h1m2 0h1M1 32.5h1m3 0h2m1 0h1m1 0h2m2 0h2m1 0h1m1 0h5m1 0h1m1 0h1m1 0h1m4 0h2m2 0h1M1 33.5h1m4 0h2m1 0h1m1 0h3m1 0h1m1 0h2m1 0h2m1 0h1m2 0h2m2 0h1m2 0h5m1 0h2M9 34.5h1m1 0h1m1 0h2m1 0h1m1 0h7m1 0h1m4 0h1m1 0h1m3 0h1m2 0h2M1 35.5h7m2 0h2m3 0h1m2 0h1m2 0h2m3 0h4m1 0h3m1 0h1m1 0h2M1 36.5h1m5 0h1m1 0h2m1 0h1m1 0h2m2 0h2m2 0h2m1 0h2m2 0h1m3 0h1m3 0h2m1 0h2M1 37.5h1m1 0h3m1 0h1m1 0h2m1 0h3m7 0h1m2 0h1m1 0h1m3 0h1m1 0h5m1 0h1m1 0h1M1 38.5h1m1 0h3m1 0h1m1 0h1m2 0h1m1 0h1m1 0h1m1 0h4m1 0h2m1 0h1m2 0h1m4 0h1m1 0h1m1 0h1M1 39.5h1m1 0h3m1 0h1m1 0h2m5 0h2m1 0h1m1 0h3m3 0h6m1 0h4M1 40.5h1m5 0h1m3 0h2m2 0h1m1 0h1m2 0h1m1 0h2m3 0h1m1 0h1m3 0h1m1 0h1m1 0h2m1 0h1M1 41.5h7m1 0h2m2 0h1m2 0h2m1 0h1m1 0h1m1 0h5m2 0h1m1 0h1m1 0h4m1 0h1"/></svg>
+</div>
+        <a class="boton" href="https://pay.google.com/gp/v/save/eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YWxsZXQtZGVtb0B0YXJqZXRhLWRlbW8uaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJhdWQiOiJnb29nbGUiLCJ0eXAiOiJzYXZldG93YWxsZXQiLCJvcmlnaW5zIjpbImh0dHBzOi8vbmljb2xhcy1odWdvLXdvcmsuZ2l0aHViLmlvIl0sInBheWxvYWQiOnsibG95YWx0eU9iamVjdHMiOlt7ImlkIjoiMzM4ODAwMDAwMDAyMzIxODQ5Ni5zb2Npb19tYXJpYS1xdWlzcGUiLCJjbGFzc0lkIjoiMzM4ODAwMDAwMDAyMzIxODQ5Ni5wb2xsb3NfY29wYWNhYmFuYV9kZW1vIn1dfSwiaWF0IjoxNzkxNjAzMzkxfQ.bRo3hbxp2FbTpdJVfPdONr3lWvLu6QQkDZcuv_IlQY0i3rKrIdyQzdjapQnD9NS3-CHXtDGFRdr6c2bs0lfzndkvzewd1WhxihHJXx4q0JR5ulFS1wDVDhxesZ6Er6m4EhdxzgYPfnD7gb1I4ZFPxNlExPgqlN9S1JllRK-IPahVIrYSHS9ZP1CR75Bc0zi_74j3Y9VIMO9ZneWOaxMzGU90SX2JFR2op6SAHYh47McBqJOORT4myUcn--n8JkgKTua6pJN4VB-7s0yrMK2jAEQdGu2jNtKYs20FABMKsB5IKb2x8ykLP6lw6H8F9mh-LlCyLGjeDBNTIpjmp-nD9Q"><img src="img/boton-wallet-es.svg" alt="Agregar a Google Wallet" width="252" height="48"></a>
+      </article>
+      <article class="socio">
+        <h3>Carla Rojas</h3>
+        <p class="numero">PC-000187</p>
+        <p class="saldo"><b>260</b> pts · <b>9/10</b> sellos</p>
+        <div class="qr" role="img" aria-label="Código QR para guardar la tarjeta de Carla Rojas"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39 39" shape-rendering="crispEdges"><path fill="#FFFFFF" d="M0 0h39v39H0z"/><path stroke="#1A1A1A" d="M1 1.5h7m4 0h1m1 0h8m2 0h3m2 0h1m1 0h7M1 2.5h1m5 0h1m4 0h2m1 0h2m2 0h1m1 0h1m5 0h2m2 0h1m5 0h1M1 3.5h1m1 0h3m1 0h1m1 0h1m1 0h4m1 0h2m2 0h6m1 0h3m1 0h1m1 0h3m1 0h1M1 4.5h1m1 0h3m1 0h1m1 0h1m2 0h1m1 0h1m2 0h2m1 0h1m4 0h3m3 0h1m1 0h3m1 0h1M1 5.5h1m1 0h3m1 0h1m1 0h3m4 0h6m2 0h1m6 0h1m1 0h3m1 0h1M1 6.5h1m5 0h1m1 0h1m2 0h1m2 0h1m1 0h3m3 0h1m1 0h1m1 0h3m1 0h1m5 0h1M1 7.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M9 8.5h1m1 0h1m2 0h4m1 0h7m1 0h1M1 9.5h1m1 0h5m3 0h3m4 0h1m1 0h1m2 0h1m2 0h3m2 0h5M3 10.5h3m2 0h2m2 0h1m3 0h1m1 0h4m2 0h1m1 0h2m1 0h1m2 0h1m2 0h2M3 11.5h1m1 0h1m1 0h1m1 0h5m1 0h2m1 0h1m4 0h1m4 0h1m1 0h1m1 0h1m2 0h3M2 12.5h2m1 0h1m3 0h1m3 0h1m1 0h3m2 0h1m1 0h1m1 0h1m3 0h2m7 0h1M4 13.5h4m2 0h1m1 0h1m1 0h1m2 0h3m3 0h2m1 0h2m1 0h3m1 0h1m1 0h3M3 14.5h3m2 0h2m4 0h1m2 0h1m1 0h2m1 0h1m1 0h1m2 0h1m1 0h1m2 0h1M2 15.5h1m1 0h1m1 0h3m1 0h2m1 0h1m2 0h2m1 0h1m7 0h4m1 0h3m1 0h2M1 16.5h2m1 0h2m2 0h2m1 0h2m4 0h1m2 0h1m1 0h3m3 0h1m3 0h2m2 0h1M3 17.5h1m1 0h1m1 0h1m2 0h3m5 0h1m2 0h1m1 0h4m1 0h1m1 0h2m1 0h1m1 0h1m1 0h1M2 18.5h2m1 0h2m1 0h1m2 0h2m1 0h2m1 0h2m1 0h3m1 0h2m3 0h1m2 0h1m1 0h1m1 0h1M1 19.5h3m2 0h4m2 0h2m2 0h3m2 0h1m1 0h1m3 0h3m3 0h2m1 0h2M1 20.5h1m2 0h3m3 0h2m2 0h1m1 0h2m3 0h4m2 0h2m1 0h2m5 0h1M1 21.5h2m2 0h1m1 0h2m1 0h6m2 0h1m1 0h1m2 0h6m1 0h2m1 0h3M1 22.5h1m3 0h1m2 0h2m3 0h2m2 0h1m2 0h3m1 0h1m1 0h1m2 0h1m4 0h1M1 23.5h1m1 0h1m2 0h4m2 0h3m1 0h1m1 0h2m1 0h2m4 0h2m2 0h4m1 0h2M3 24.5h1m1 0h1m5 0h1m1 0h2m1 0h2m3 0h4m2 0h7m2 0h2M3 25.5h2m2 0h4m2 0h1m1 0h1m2 0h2m3 0h1m1 0h3m3 0h1m1 0h1m1 0h2M1 26.5h1m1 0h2m3 0h2m1 0h2m4 0h1m1 0h2m2 0h2m4 0h1m2 0h1m1 0h1M1 27.5h1m3 0h1m1 0h2m2 0h1m2 0h1m1 0h1m2 0h1m1 0h2m3 0h4m1 0h2m3 0h2M1 28.5h1m2 0h3m3 0h2m3 0h3m1 0h1m2 0h2m3 0h1m1 0h2m6 0h1M1 29.5h1m1 0h7m6 0h1m1 0h1m2 0h1m1 0h2m1 0h12M9 30.5h1m7 0h8m3 0h2m3 0h2M1 31.5h7m2 0h1m1 0h5m1 0h1m8 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1M1 32.5h1m5 0h1m1 0h2m1 0h3m1 0h2m1 0h1m2 0h1m6 0h1m3 0h2m1 0h1M1 33.5h1m1 0h3m1 0h1m1 0h1m1 0h2m1 0h2m1 0h2m1 0h1m2 0h11m1 0h1m1 0h1M1 34.5h1m1 0h3m1 0h1m1 0h1m3 0h2m2 0h6m1 0h1m1 0h1m2 0h3m1 0h2m1 0h2M1 35.5h1m1 0h3m1 0h1m1 0h3m2 0h3m1 0h1m3 0h2m2 0h2m1 0h1m5 0h3M1 36.5h1m5 0h1m2 0h7m4 0h2m4 0h1m1 0h2m2 0h1m3 0h1M1 37.5h7m1 0h2m4 0h1m2 0h1m1 0h1m2 0h1m1 0h2m3 0h2m1 0h5"/></svg>
+</div>
+        <a class="boton" href="https://pay.google.com/gp/v/save/eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YWxsZXQtZGVtb0B0YXJqZXRhLWRlbW8uaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJhdWQiOiJnb29nbGUiLCJ0eXAiOiJzYXZldG93YWxsZXQiLCJvcmlnaW5zIjpbImh0dHBzOi8vbmljb2xhcy1odWdvLXdvcmsuZ2l0aHViLmlvIl0sInBheWxvYWQiOnsibG95YWx0eU9iamVjdHMiOlt7ImlkIjoiMzM4ODAwMDAwMDAyMzIxODQ5Ni5zb2Npb19jYXJsYS1yb2phcyIsImNsYXNzSWQiOiIzMzg4MDAwMDAwMDIzMjE4NDk2LnBvbGxvc19jb3BhY2FiYW5hX2RlbW8ifV19LCJpYXQiOjE3OTE2MDMzOTN9.LifAUfX74PBGpPuFf1CSPi7FYPSk4wZW_FynUXkTnrYT97cXPcyLKDjjraxgH1PxF7Zncl_hVNBqd0-qouMCrHoV2BS5XgfMhxpTTn_q_YLFK762F17OO5aRS7ZbWDNCJipw4P-oOgxPxHbBahYQWioVp-O95o1GwgsDqAb2XRIXPkEcizIO1Rbc8w6bOtNmNt3TrwWREJ4v5wkaG7sbuqNrFPBXiM4a_0r-TFiRrFrPcH34pjxVuEgRTUlVkOuH2P4LHvIY6lmGmrcovrQVm202wlyd2HkL8ozjGFTon6wfKds_v9lRnPDP-BMAgvMBI9ybtSDGdhJDn-VF6PPo3g"><img src="img/boton-wallet-es.svg" alt="Agregar a Google Wallet" width="252" height="48"></a>
+      </article>
+    </div>
+  </section>
+
+  <section id="beneficios">
+    <h2>Lo que gana tu restaurante</h2>
+    <ul class="beneficios">
+      <li><b>Puntos y sellos en vivo</b>Cada compra suma en la tarjeta del cliente en segundos.</li>
+      <li><b>Promos directo al celular</b>Avisa "martes de cuarto 2x1" con una notificación.</li>
+      <li><b>Aviso al pasar cerca</b>La tarjeta aparece cuando el cliente está cerca de tu sucursal.</li>
+      <li><b>Cero costo de emisión</b>Sin imprimir tarjetas ni pagar por cada cliente.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <div class="contenido">
+      <p><strong>Demo conceptual — no afiliado a Pollos Copacabana.</strong> La marca se usa solo para mostrar cómo se vería una tarjeta de fidelidad real.</p>
+      <p>Tarjeta en modo de prueba de Google: solo pueden guardarla las cuentas de Gmail habilitadas para la demo. Google Wallet está disponible en Android.</p>
+    </div>
+  </footer>
+</body>
+</html>
